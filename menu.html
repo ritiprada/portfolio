@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome!</title>
+    <style>
+        html {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background-color: rgb(255, 212, 133);
+}
+.word {
+
+    background-color:  rgb(255, 212, 133);
+    margin-left: 100px;
+    margin-top: 30px;
+    display: inline-block;
+    font-size: xx-large;
+    font-weight: bolder;
+
+
+}
+
+.words {
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 50px;
+    line-height: 30px;
+}
+
+.mobile-menu-header {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(rgb(51, 51, 185),rgb(97, 88, 255),rgb(124, 117, 251),rgb(164, 159, 255),rgb(124, 117, 251), rgb(97, 88, 255),rgb(51, 51, 185), blue);
+            
+        }
+
+        .mobile-menu-exit img {
+            width: 150px;
+            margin-top: 10px;
+            margin-left: 10px; 
+        }
+
+        .tooltip {
+            background-color: red;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            height: 50px;
+            border-radius: 5px;
+            position: absolute;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            margin-bottom: 30px;
+            transition: all 0.1s;
+            opacity: 0;
+            font-size: xx-large;
+            font-weight: bold;
+        }
+
+        .tooltip:hover {
+            opacity: 100;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 5);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header class="mobile-menu-header">
+        <div class="mobile-menu-exit">
+            <a href="index.html">
+                <div class="tooltip">EXIT WE MUST EXPLORE !!</div>
+                <img src="icons/logo.png">
+            </a>
+        </div>
+    </header>
+    <div class="word">welcome to my world</div>
+    
+    <div class="words">feel free to explore the icons on my homepage to gain a better understanding of my mind.. you can find your way out.</div>
+</body>
+</html>

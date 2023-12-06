@@ -1,0 +1,338 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ritiprada</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: rgb(255, 212, 133);
+            font-family: Arial, sans-serif;
+        }
+
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .body-wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100%;
+        }
+
+        .mobile-header {
+            display: flex;
+            flex-direction: row;
+            width: 100vw;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(rgb(51, 51, 185),rgb(97, 88, 255),rgb(124, 117, 251),rgb(164, 159, 255),rgb(124, 117, 251), rgb(97, 88, 255),rgb(51, 51, 185), blue);
+            
+        }
+
+        .mobile-header-logo img {
+            width: 150px;
+            margin-top: 10px;
+            margin-left: 10px; 
+        }
+
+        /* .mobile-header-time {
+            padding-right: 110px ;
+            color: white;
+            font-weight: bolder;
+        } */
+
+        .mobile-header-menu-icon {
+            margin-right: 10px ;
+        }
+            
+
+        .mobile-app-icon-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            column-gap: 20px;
+            margin-left: 30px;
+           
+            margin-top: 30px;
+        }
+
+        .bottom-panel-icons {
+
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+            align-items: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+          
+        }
+
+        .bottom-panel-icons img {
+            margin-right: 10px;
+            margin-left: 10px;
+        }
+
+        /* Updated class names with straight quotes */
+        .instagram-icon img {
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 15px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            cursor: pointer;
+        }
+
+        .instagram-icon:active {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .instagram-icon:hover {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .linkedin-icon img {
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 15px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            cursor: pointer;
+        }
+
+        .linkedin-icon:active {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .linkedin-icon:hover {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .soundcloud-icon img {
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 15px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            cursor: pointer;
+        }
+
+
+        .soundcloud-icon:active {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .soundcloud-icon:hover {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .photos-icon img {
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 15px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            cursor: pointer;
+        }
+        
+        .photos-icon:active {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .photos-icon:hover {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .projects-icon img {
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 15px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            cursor: pointer;
+        }
+        
+        .projects-icon:active {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .projects-icon:hover {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .about-icon img {
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 50px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            cursor: pointer;
+        }
+        
+        .about-icon:active {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .about-icon:hover {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+
+        .mail-icon img {
+            box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 15px;
+            padding-top: 1px;
+            padding-bottom: 1px;
+            padding-left: 1px;
+            padding-right: 1px;
+            cursor: pointer;
+        }
+        
+        .mail-icon:active {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .mail-icon:hover {
+            margin-top: 3px;
+            margin-left: 3px;
+            box-shadow: none;
+        }
+
+        .tooltip {
+            background-color: red;
+            color: white;
+            height: 20px;
+            border-radius: 8px;
+            position: absolute;
+            padding-left: 10px;
+            padding-right: 10px;
+            margin-bottom: 30px;
+            transition: all 0.1s;
+            opacity: 0;
+            font-weight: lighter;
+        }
+
+        .tooltip:hover {
+            opacity: 100;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.2);
+        }
+
+
+
+    </style>
+</head>
+<body>
+    
+    <header class="mobile-header">
+        <div class="mobile-header-logo">
+            <a href="index.html">
+                <img src="icons/logo.png">
+            </a>
+        </div>
+        <!-- <div class="mobile-header-time"> 
+            8:88 
+        </div> -->
+        <div class="mobile-header-menu-icon"> 
+            <a href="menu.html">
+                <img src="icons/menu-icon.png" alt="Menu">
+            </a>
+        </div>
+    </header>
+    <div class="body-wrapper">
+    <div class="mobile-app-icon-grid">
+        
+        <div class="instagram-icon"> 
+            <a href="https://www.instagram.com/ritiprada/">
+            <div class="tooltip">Instagram</div>
+            <img src="icons/instagram-icon.png" alt="Instagram"> 
+        </a>
+        </div>
+
+        <div class="linkedin-icon"> 
+            <a href="https://www.linkedin.com/in/riti-prasad-711762238/">
+            <div class="tooltip">LinkedIn</div>
+            <img src="icons/linkedin-icon.png" alt="LinkedIn"> 
+        </a>
+        </div>
+    
+        <div class="soundcloud-icon"> 
+            <a href="https://soundcloud.com/travisscott-2/04-drugs-you-should-try-it">
+            <div class="tooltip">A song 4 you <3 </div>
+            <img src="icons/soundcloud-icon.png" alt="SoundCloud"> 
+        </a>
+        </div>
+    
+        <div class="photos-icon">
+            <div class="tooltip">Photos</div>
+            <img src="icons/photos-icon.png" alt="Photos"> 
+        </div>
+    </div>
+
+    <div class="bottom-panel-icons">
+        
+        <div class="projects-icon"> 
+            <div class="tooltip">Projects</div>
+            <img src="icons/projects-icon.png" alt="Projects"> 
+        </div>
+
+        <div class="about-icon"> 
+            <div class="tooltip">About me</div> 
+            <a href="about.html">
+            <img src="icons/about-icon.png" alt="About"> 
+            </a>
+        </div>
+
+        <div class="mail-icon"> 
+            <a href="mailto:rritiprada@gmail.com">
+            <div class="tooltip">Email me</div>
+            <img src="icons/mail-icon.png" alt="Mail"> 
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
